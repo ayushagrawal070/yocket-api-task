@@ -9,8 +9,7 @@ const port = process.env.PORT || 8000;
 dotenv.config();
 
 app.use(express.json());
-
-mongoose.connect(process.env.CONNECTION_URL)
+mongoose.connect(process.env.mongoURI)
     .then(console.log("database connected"))
     .catch(err => console.log(err));
 
